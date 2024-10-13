@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for Products</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            width: 100%;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 15px;
+            border: 2px solid #ccc;
+            border-radius: 25px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        .search-bar:focus {
+            outline: none;
+            border-color: #007BFF;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        }
+        .search-btn {
+            padding: 15px 30px;
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .search-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>What type of products are you interested in?</h1>
+    <form action="/search" method="POST">
+        <input type="text" class="search-bar" id="user_interest" name="user_interest" placeholder="e.g., clothing, electronics, food" required>
+        <br>
+        <button type="submit" class="search-btn">Search</button>
+    </form>
+</div>
+
+</body>
+</html>
